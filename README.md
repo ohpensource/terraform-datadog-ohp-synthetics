@@ -1,29 +1,41 @@
-# README #
+# Terraform Module - Datadog Synthetic Monitors
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Maintainer
 
-### What is this repository for? ###
+* Platform Services
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Author
 
-### How do I get set up? ###
+* Rupert Broad
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## Version
 
-### Contribution guidelines ###
+Current version: v0.0.0
 
-* Writing tests
-* Code review
-* Other guidelines
+## Description
 
-### Who do I talk to? ###
+Describe what your module does here.
 
-* Repo owner or admin
-* Other community or team contact
+## Usage
+
+Describe how to use your module here.
+
+## Prerequites
+
+If there are any prerequistes to making this module work, add them here.
+
+### Optional
+
+* [pre-commit](https://pre-commit.com/#install)
+    * Install the pre-commit hooks in the mod repo using
+
+      ```(text)
+      pre-commit install
+      ```
+
+* Python3 & pip
+    * Any addtional pip modules should be added to requirements.txt
+
+## Documentation
+
+[confluence](https://ohpendev.atlassian.net/wiki/spaces/CCE/pages/2062320795/Terraform+Modules)
