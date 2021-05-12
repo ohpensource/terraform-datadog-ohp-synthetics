@@ -8,4 +8,4 @@ tar -xzf terraform-docs.tar.gz
 chmod +x terraform-docs 
 mv terraform-docs /usr/local/bin/terraform-docs
 
-terraform-docs --sort-by-required markdown table ./ > README.md
+/usr/local/bin/terraform-docs --sort-by-required markdown table ./ > README.md
