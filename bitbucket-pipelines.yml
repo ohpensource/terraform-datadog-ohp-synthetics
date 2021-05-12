@@ -27,16 +27,12 @@ definitions:
           - set -o pipefail
           - | 
             # Create / update terraform docs
-            cat README.md
             chmod +x ./scripts/tfm_docs.sh
             source ./scripts/tfm_docs.sh
-            cat README.md
           - |
             # Update version
-            cat README.md
             chmod +x .bitbucket/bump.sh
             source .bitbucket/bump.sh
-            cat README.md
 pipelines:
   branches:
     feature/*:
