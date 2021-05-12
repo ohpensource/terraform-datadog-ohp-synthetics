@@ -18,7 +18,7 @@ if [ -d modules ]; then
       # cycle through each module dir and create docs
       cd "$f" || exit
       echo -e "\n## Creating terraform docs for module $f"
-      terraform-docs markdown table --output-file  ./README.md . --sort-by required
+      terraform-docs markdown table --output-file  "$f"/README.md --sort-by required
       git add README.md
       cd ..
     fi
@@ -27,5 +27,5 @@ if [ -d modules ]; then
   return
 else
   echo -e "\n## Creating terraform docs for module"
-  terraform-docs markdown table --output-file  README.md . --sort-by required
+  terraform-docs markdown table --output-file  README.md --sort-by required
 fi  
