@@ -24,5 +24,6 @@ if [ -d modules ]; then
   done
   cd ..
 else
+  echo -e "\n## Creating terraform docs for module"
   terraform-docs markdown table --output-file  README.md . --sort-by required
 fi  
