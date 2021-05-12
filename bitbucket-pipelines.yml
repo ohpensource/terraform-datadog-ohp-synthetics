@@ -16,8 +16,6 @@ definitions:
           - |
             chmod +x ./scripts/*.sh
             source ./scripts/tfm_init.sh
-            source ./scripts/lint.sh
-            source ./scripts/validate.sh
     - step: &bump
         name: bump module version
         image:
