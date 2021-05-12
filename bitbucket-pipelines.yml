@@ -25,6 +25,10 @@ definitions:
             secret-key: $ECR_AWS_SECRET_KEY_XOPS_PULL
         script:
           - set -o pipefail
+          - | 
+            # Create / update terraform docs
+            chmod +x scripts/tfm_docs.sh
+            source scripts/tfm_docs.sh
           - |
             # Update version
             chmod +x .bitbucket/bump.sh

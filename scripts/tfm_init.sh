@@ -6,7 +6,6 @@ run_scripts(){
   if ! terraform init -input=false -backend=false; then exit $?; fi
   source "$WKDIR"/scripts/lint.sh
   source "$WKDIR"/scripts/validate.sh
-  source "$WKDIR"/scripts/tfm_docs.sh
 }
 
 if [ -d modules ]; then

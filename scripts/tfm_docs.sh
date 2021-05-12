@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install Terraform-docs
+# Install Terraform-docs if not installed
 TFM_DOCS_VER="0.13.0"
 
 if ! command -v terraform-docs >/dev/null 2>&1; then
@@ -10,4 +10,19 @@ if ! command -v terraform-docs >/dev/null 2>&1; then
   mv terraform-docs /usr/local/bin/terraform-docs
 fi
 
-terraform-docs markdown table --output-file  README.md . --sort-by required
+# Create docs for each module
+if [ -d modules ]; then
+  cd ./modules || exit
+  for f in *; do
+    if [ -d "$f" ]; then
+      # cycle through each module dir and create docs
+      cd "$f" || exit
+      echo -e "\n## Creating terraform docs for module $f"
+      terraform-docs markdown table --output-file  README.md . --sort-by required
+      cd ..
+    fi
+  done
+  cd ..
+else
+  terraform-docs markdown table --output-file  README.md . --sort-by required
+fi  
