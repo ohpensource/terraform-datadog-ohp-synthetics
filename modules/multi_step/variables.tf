@@ -1,6 +1,5 @@
 variable "name" {
   type        = string
-  default     = "test"
   description = "Required. Name of Datadog synthetics test"
 }
 
