@@ -1,7 +1,7 @@
 provider "datadog" {
   api_url = "https://api.datadoghq.eu/"
-  app_key = var.app_key
-  api_key = var.api_key
+  app_key = var.datadog_app_key
+  api_key = var.datadog_api_key
 }
 
 module "multi_step" {
