@@ -13,7 +13,7 @@ module "multi_step" {
 }
 
 data "aws_secretsmanager_secret" "cognito" {
-  name = "rbc-tst-internal-monitor"
+  name = "${var.client}-${var.dtap}-internal-monitor"
 }
 
 data "aws_secretsmanager_secret_version" "cognito" {
