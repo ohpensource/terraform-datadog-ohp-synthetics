@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.11.0
+
+- minor: merge remote-tracking branch 'origin/master'
+
 ## 0.10.1
 
 - patch: lanz-943  update examples
