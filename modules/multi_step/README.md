@@ -33,7 +33,7 @@ If there are any prerequistes to making this module work, add them here.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~>0.15 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~>0.14 |
 | <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | ~> 2.21 |
 
 ## Providers

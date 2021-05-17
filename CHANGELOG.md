@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.11.1
+
+- patch:  reduce required tfm version to 0.14
+
 ## 0.11.0
 
 - minor: merge remote-tracking branch 'origin/master'
