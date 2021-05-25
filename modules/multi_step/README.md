@@ -71,11 +71,10 @@ No modules.
 | <a name="input_api_type"></a> [api\_type](#input\_api\_type) | Required. Synthetics test type (api or browser) | `string` | `"api"` | no |
 | <a name="input_datadog_api_key"></a> [datadog\_api\_key](#input\_datadog\_api\_key) | DataDog API Key (resolved from repo bitbucket local vars) | `string` | `""` | no |
 | <a name="input_datadog_app_key"></a> [datadog\_app\_key](#input\_datadog\_app\_key) | DataDog App Key (resolved from repo bitbucket local vars) | `string` | `""` | no |
-| <a name="input_local_scripts_dir"></a> [local\_scripts\_dir](#input\_local\_scripts\_dir) | Scripts directory or absolute path from cwd. Does not require leading or trailing / | `string` | `"scripts"` | no |
 | <a name="input_locations"></a> [locations](#input\_locations) | Required. Array of locations used to run the test. Refer to Datadog documentation for available locations | `list(any)` | <pre>[<br>  "aws:eu-west-1"<br>]</pre> | no |
 | <a name="input_message"></a> [message](#input\_message) | Optional. Message to send on alert | `string` | `""` | no |
 | <a name="input_options_list"></a> [options\_list](#input\_options\_list) | n/a | `map(any)` | <pre>{<br>  "renotify_interval": 100,<br>  "retry_count": 2,<br>  "retry_interval": 300,<br>  "tick_every": 900<br>}</pre> | no |
-| <a name="input_script_name"></a> [script\_name](#input\_script\_name) | Name of datadog syntethic test script incl. extension | `string` | `"datadog_synthetic.sh"` | no |
+| <a name="input_script_relative_path"></a> [script\_relative\_path](#input\_script\_relative\_path) | Relative path to file from current working directory. Incl. filename | `string` | `""` | no |
 | <a name="input_status"></a> [status](#input\_status) | Required. Define whether you want to start (live) or pause (paused) a Synthetic test | `string` | `"paused"` | no |
 
 ## Outputs
