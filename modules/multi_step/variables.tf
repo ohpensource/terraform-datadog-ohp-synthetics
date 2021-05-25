@@ -78,14 +78,20 @@ variable "datadog_app_key" {
   default     = ""
 }
 
-variable "local_scripts_dir" {
-  type        = string
-  description = "Scripts directory or absolute path from cwd. Does not require leading or trailing /"
-  default     = "scripts"
-}
+# variable "local_scripts_dir" {
+#   type        = string
+#   description = "Scripts directory or absolute path from cwd. Does not require leading or trailing /"
+#   default     = "scripts"
+# }
 
-variable "script_name" {
+# variable "script_name" {
+#   type        = string
+#   description = "Name of datadog syntethic test script incl. extension"
+#   default     = "datadog_synthetic.sh"
+# }
+
+variable "script_relative_path" {
   type        = string
-  description = "Name of datadog syntethic test script incl. extension"
-  default     = "datadog_synthetic.sh"
+  description = "Relative path to file from current working directory. Incl. filename"
+  default     = ""
 }
