@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.12.1
+
+- patch:  add condition for empty scripts path
+
 ## 0.12.0
 
 - minor:  create test script from template
