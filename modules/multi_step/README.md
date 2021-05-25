@@ -41,6 +41,7 @@ If there are any prerequistes to making this module work, add them here.
 | Name | Version |
 |------|---------|
 | <a name="provider_datadog"></a> [datadog](#provider\_datadog) | ~> 2.21 |
+| <a name="provider_local"></a> [local](#provider\_local) | n/a |
 
 ## Modules
 
@@ -51,6 +52,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [datadog_synthetics_test.multi](https://registry.terraform.io/providers/DataDog/datadog/latest/docs/resources/synthetics_test) | resource |
+| [local_file.run_test_script](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 
 ## Inputs
 
@@ -63,9 +65,13 @@ No modules.
 | <a name="input_alert_tags_separator"></a> [alert\_tags\_separator](#input\_alert\_tags\_separator) | Separator for the alert tags. All strings from the `alert_tags` variable will be joined into one string using the separator and then added to the alert message | `string` | `"\n"` | no |
 | <a name="input_api_subtype"></a> [api\_subtype](#input\_api\_subtype) | When type is api, choose from http, ssl, tcp, dns or multi | `string` | `"multi"` | no |
 | <a name="input_api_type"></a> [api\_type](#input\_api\_type) | Required. Synthetics test type (api or browser) | `string` | `"api"` | no |
+| <a name="input_datadog_api_key"></a> [datadog\_api\_key](#input\_datadog\_api\_key) | DataDog API Key (resolved from repo bitbucket local vars) | `string` | `""` | no |
+| <a name="input_datadog_app_key"></a> [datadog\_app\_key](#input\_datadog\_app\_key) | DataDog App Key (resolved from repo bitbucket local vars) | `string` | `""` | no |
+| <a name="input_local_scripts_dir"></a> [local\_scripts\_dir](#input\_local\_scripts\_dir) | Scripts directory or absolute path from cwd. Does not require leading or trailing / | `string` | `"scripts"` | no |
 | <a name="input_locations"></a> [locations](#input\_locations) | Required. Array of locations used to run the test. Refer to Datadog documentation for available locations | `list(any)` | <pre>[<br>  "aws:eu-west-1"<br>]</pre> | no |
 | <a name="input_message"></a> [message](#input\_message) | Optional. Message to send on alert | `string` | `""` | no |
 | <a name="input_options_list"></a> [options\_list](#input\_options\_list) | n/a | `map(any)` | <pre>{<br>  "renotify_interval": 100,<br>  "retry_count": 2,<br>  "retry_interval": 300,<br>  "tick_every": 900<br>}</pre> | no |
+| <a name="input_script_name"></a> [script\_name](#input\_script\_name) | Name of datadog syntethic test script incl. extension | `string` | `"datadog_synthetic.sh"` | no |
 | <a name="input_status"></a> [status](#input\_status) | Required. Define whether you want to start (live) or pause (paused) a Synthetic test | `string` | `"paused"` | no |
 
 ## Outputs
