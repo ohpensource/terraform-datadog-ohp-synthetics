@@ -64,5 +64,28 @@ variable "api_steps" {
   description = "Required. API test steps"
 }
 
+variable "datadog_api_key" {
+  description = "DataDog API Key (resolved from repo bitbucket local vars)"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
 
+variable "datadog_app_key" {
+  description = "DataDog App Key (resolved from repo bitbucket local vars)"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
 
+variable "local_scripts_dir" {
+  type        = string
+  description = "Scripts directory or absolute path from cwd. Does not require leading or trailing /"
+  default     = "scripts"
+}
+
+variable "script_name" {
+  type        = string
+  description = "Name of datadog syntethic test script incl. extension"
+  default     = "datadog_synthetic.sh"
+}
