@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.12.3
+
+- patch:  update documentation 
+
 ## 0.12.2
 
 - patch:  change how path to script is provided
