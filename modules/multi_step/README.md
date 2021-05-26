@@ -2,27 +2,17 @@
 
 ## Description
 
-Describe what your module does here.
+Datadog Synthetics are a way to run tests against an API or HTTP endpoint and return a result to datadog. More information can be found [here](https://docs.datadoghq.com/synthetics/)
 
 ## Usage
 
-Describe how to use your module here.
+Please see examples folder for how to use this module.
+
+To be able to use the sensitive function to hide secrets during automation, Terraform v0.15 is required.
 
 ## Prerequites
 
-If there are any prerequistes to making this module work, add them here.
-
-### Optional
-
-* [pre-commit](https://pre-commit.com/#install)
-    * Install the pre-commit hooks in the mod repo using
-
-      ```(text)
-      pre-commit install
-      ```
-
-* Python3 & pip
-    * Any addtional pip modules should be added to requirements.txt
+To avoid storing the Datadog API and APP keys (secrets) in the repository we leverage Bitbucket variables and Terraform [TF_VAR_xxx](https://www.terraform.io/docs/cli/config/environment-variables.html#tf_var_name) environment variables.
 
 ## Documentation
 
@@ -37,7 +27,7 @@ If there are any prerequistes to making this module work, add them here.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~>0.14 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~>0.15 |
 | <a name="requirement_datadog"></a> [datadog](#requirement\_datadog) | ~> 2.21 |
 
 ## Providers

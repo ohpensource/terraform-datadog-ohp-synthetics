@@ -5,11 +5,13 @@ provider "datadog" {
 }
 
 module "multi_step" {
-  source    = "git@bitbucket.org:ohpen-dev/terraform-datadog-ohp-synthetics.git//modules//multi_step?ref=v0.1.0"
-  name      = "test"
-  api_steps = local.api_steps
-  tags      = ["env:tst"]
-
+  source               = "git@bitbucket.org:ohpen-dev/terraform-datadog-ohp-synthetics.git//modules//multi_step?ref=v0.1.0"
+  name                 = "test"
+  api_steps            = local.api_steps
+  tags                 = ["env:tst"]
+  datadog_app_key      = var.datadog_app_key
+  datadog_api_key      = var.datadog_api_key
+  script_relative_path = "../../synthetics/dd-synth-test-${local.environment}.sh"
 }
 
 data "aws_secretsmanager_secret" "cognito" {
