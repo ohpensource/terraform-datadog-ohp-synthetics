@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.12.4
+
+- patch:  readme
+
 ## 0.12.3
 
 - patch:  update documentation 
