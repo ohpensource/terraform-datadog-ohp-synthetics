@@ -1,6 +1,10 @@
 # Changelog
 Note: version releases in the 0.x.y range may introduce breaking changes.
 
+## 0.13.0
+
+- minor: merge branch 'feature/update-docs'
+
 ## 0.12.4
 
 - patch:  readme
