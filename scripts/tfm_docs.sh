@@ -17,7 +17,7 @@ if [ -d "$MOD_DIR" ]; then
   for f in $(ls -d ./$MOD_DIR/*); do
       # cycle through each module dir and create docs
       echo -e "\n ## Creating terraform docs for module $f"
-      terraform-docs markdown table "./$f" --sort-by required --output-file README.md 
+      terraform-docs markdown table "./$f/" --sort-by required --output-file README.md 
       git add "./$f/README.md"
   done
 else
