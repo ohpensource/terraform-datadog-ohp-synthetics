@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -o pipefail
+
+curl -X POST \
+-H 'Content-Type: application/json' \
+-H "DD-API-KEY: ${DATADOG_API_KEY}" \
+-H "DD-APPLICATION-KEY: ${DATADOG_APP_KEY}" \
+-d "{
+    \"tests\": [
+        {
+            \"public_id\": \"${SYNTHETIC_TEST_ID}\"
+        }
+    ]
+}" "https://api.datadoghq.eu/api/v1/synthetics/tests/trigger/ci"
