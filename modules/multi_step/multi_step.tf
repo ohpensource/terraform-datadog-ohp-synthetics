@@ -87,6 +87,11 @@ resource "datadog_synthetics_test" "multi" {
           }
         }
       }
+      
+      retry {
+        count    = var.options_list.retry_count
+        interval = var.options_list.retry_interval
+    }
     }
   }
 
