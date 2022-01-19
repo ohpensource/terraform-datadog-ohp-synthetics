@@ -83,3 +83,10 @@ variable "script_relative_path" {
   description = "Relative path to file from current working directory. Incl. filename"
   default     = ""
 }
+
+variable "create_local_script" {
+  description = "Create local test script"
+  type = string
+  default = "true"
+}
+

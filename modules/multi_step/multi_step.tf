@@ -22,6 +22,7 @@ resource "datadog_synthetics_test" "multi" {
         no_saving_response_body = lookup(api_step.value.request_definition, "no_saving_response_body", null)
         port                    = lookup(api_step.value.request_definition, "port", null)
         timeout                 = lookup(api_step.value.request_definition, "timeout", null)
+        follow_redirects        = lookup(api_step.value.request_definition, "follow_redirects", null)
       }
       request_headers = lookup(api_step.value, "request_headers", null)
 
@@ -87,6 +88,11 @@ resource "datadog_synthetics_test" "multi" {
           }
         }
       }
+      
+      retry {
+        count    = var.options_list.retry_count
+        interval = var.options_list.retry_interval
+    }
     }
   }
 
