@@ -1,0 +1,6 @@
+[
+  {
+    "description": " add condition for empty scripts path",
+    "type": "patch"
+  }
+]
