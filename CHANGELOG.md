@@ -1,3 +1,9 @@
+# :confetti_ball: 0.13.3 (2022-04-25T12:34:51.394Z)
+- - -
+## :newspaper: Others
+* ci: LANZ-2200 terraform docs after semver in cd workflow (#15)
+- - -
+- - -
 # :confetti_ball: 0.13.2 (2022-04-25T12:30:23.571Z)
 - - -
 ## :bug: Fixes
