@@ -1,3 +1,12 @@
+# :confetti_ball: 0.13.2 (2022-04-25T12:30:23.571Z)
+- - -
+## :bug: Fixes
+* LANZ-2200 set options_list.renotify_interval = 120 as default value
+## :newspaper: Others
+* refactor: LANZ-2200 remove notify workflow
+* ci: LANZ-2200 rebundle cicd workflows
+- - -
+- - -
 # :confetti_ball: 0.13.1 (2022-03-13T14:46:17.251Z)
 - - -
 ## :newspaper: Others
