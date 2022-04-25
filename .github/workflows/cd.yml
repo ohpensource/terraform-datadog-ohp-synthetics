@@ -19,6 +19,7 @@ jobs:
           user-name: "GitHub Actions"
           version-prefix: "v"
   tfm-docs:
+    needs: semver-changelog
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
