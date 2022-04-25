@@ -56,7 +56,7 @@ variable "options_list" {
     tick_every        = 900
     retry_count       = 2
     retry_interval    = 300
-    renotify_interval = 100
+    renotify_interval = 120
   }
 }
 
