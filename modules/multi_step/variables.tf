@@ -83,3 +83,8 @@ variable "script_relative_path" {
   description = "Relative path to file from current working directory. Incl. filename"
   default     = ""
 }
+variable "config_variables" {
+  type        = map(any)
+  default     = {}
+  description = "Map with a set of configuration variables that your synthetics test needs to use."
+}
