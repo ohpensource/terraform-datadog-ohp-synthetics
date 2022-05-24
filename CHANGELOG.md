@@ -1,3 +1,9 @@
+# :confetti_ball: 0.14.0 (2022-05-24T12:53:08.523Z)
+- - -
+## :hammer: Features
+* LANZ-2374 support configuration variables (#17)
+- - -
+- - -
 # :confetti_ball: 0.13.3 (2022-04-25T12:34:51.394Z)
 - - -
 ## :newspaper: Others
