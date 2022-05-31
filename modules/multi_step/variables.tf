@@ -56,7 +56,7 @@ variable "options_list" {
     tick_every        = 900
     retry_count       = 2
     retry_interval    = 300
-    renotify_interval = 100
+    renotify_interval = 120
   }
 }
 
@@ -90,3 +90,8 @@ variable "create_local_script" {
   default = "true"
 }
 
+variable "config_variables" {
+  type        = map(any)
+  default     = {}
+  description = "Map with a set of configuration variables that your synthetics test needs to use."
+}
