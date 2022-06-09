@@ -86,7 +86,7 @@ variable "script_relative_path" {
 
 variable "create_local_script" {
   description = "Create local test script"
-  type = string
-  default = "true"
+  type = bool 
+  default = true
 }
 
