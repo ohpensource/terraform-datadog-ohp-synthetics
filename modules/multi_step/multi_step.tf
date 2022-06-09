@@ -7,6 +7,16 @@ resource "datadog_synthetics_test" "multi" {
   tags      = var.tags
   status    = var.status
 
+  dynamic "config_variable" {
+    for_each = var.config_variables
+
+    content {
+      type = config_variable.value.type
+      name = config_variable.value.local_variable_name
+      id   = config_variable.value.global_variable_id
+    }
+  }
+
   dynamic "api_step" {
     for_each = var.api_steps
 

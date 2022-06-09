@@ -4,40 +4,29 @@ on:
     branches: ["main"]
 
 jobs:
-  tfm-validate:
+  validate-iac:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: ohpensource/platform-cicd/actions/terraform/tfm-validate@2.2.0.0
+        name: validate-terraform
+        with:
+          terraform-folder: "/modules/multi_step"
+          use-backend: "false"
+  validate-security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: aquasecurity/tfsec-action@v1.0.0
+        name: analyse-security
+  check-conventional-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Terraform Install
-        uses: hashicorp/setup-terraform@v1
-      - name: tfm-validate
-        run: |
-          chmod +x -R ./scripts
-          ./scripts/tfm_init.sh
-
-      - name: Lint Terraform
-        run: terraform fmt -write=false -list=true -recursive -check
-
-      - name: TFLint Install
-        uses: terraform-linters/setup-tflint@v1
-      - name: Run tflint
-        run: |
-          tflint --init
-          tflint -f compact
-  tfm-docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+      - uses: ohpensource/platform-cicd/actions/git/ensure-conventional-commits@0.6.0.0
+        name: Ensure conventional commits
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
-      - name: Render terraform docs inside the README.md and push changes back to PR branch
-        uses: terraform-docs/gh-actions@v0.11.0
-        with:
-          working-dir: modules/multi_step
-          output-file: README.md
-          output-method: inject
-          git-push: "true"
-          indention: 3
-          git-commit-message: "[tfm-docs][skip ci] - updating terraform docs"
+          base-branch: $GITHUB_BASE_REF
+          pr-branch: $GITHUB_HEAD_REF
