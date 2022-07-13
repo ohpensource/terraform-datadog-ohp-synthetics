@@ -1,3 +1,9 @@
+# :confetti_ball: 0.15.0 (2022-07-13T13:30:41.699Z)
+- - -
+## :hammer: Features
+* CLD-5480 add support for redirects, retry options and make local script optional (#21)
+- - -
+- - -
 # :confetti_ball: 0.14.0 (2022-05-24T12:53:08.523Z)
 - - -
 ## :hammer: Features
