@@ -7,7 +7,7 @@ jobs:
   validate-iac:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: ohpensource/platform-cicd/actions/terraform/tfm-validate@2.2.0.0
         name: validate-terraform
         with:
@@ -16,13 +16,13 @@ jobs:
   validate-security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
       - uses: aquasecurity/tfsec-action@v1.0.0
         name: analyse-security
   check-conventional-commits:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.1.0
         with:
           fetch-depth: 0
       - uses: ohpensource/platform-cicd/actions/git/ensure-conventional-commits@0.6.0.0
