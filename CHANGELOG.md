@@ -1,3 +1,9 @@
+# :confetti_ball: 0.16.0 (2023-07-31T12:50:30.023Z)
+- - -
+## :hammer: Features
+* MLA-355 add support to tests scheduling in time frames for specific days of the week. Changed input type for var.options_list from map(any) to any (#24)
+- - -
+- - -
 # :confetti_ball: 0.15.0 (2022-07-13T13:30:41.699Z)
 - - -
 ## :hammer: Features
