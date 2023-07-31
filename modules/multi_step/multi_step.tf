@@ -117,6 +117,24 @@ resource "datadog_synthetics_test" "multi" {
     monitor_options {
       renotify_interval = var.options_list.renotify_interval
     }
+
+    dynamic "scheduling" {
+      for_each = try(var.options_list.scheduling, null) != null ? [var.options_list.scheduling] : []
+
+      content {
+        timezone = scheduling.value.timezone
+
+        dynamic "timeframes" {
+          for_each = scheduling.value.timeframes
+
+          content {
+            day  = timeframes.value.day
+            from = timeframes.value.from
+            to   = timeframes.value.to
+          }
+        }
+      }
+    }
   }
 }
 

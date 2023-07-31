@@ -51,12 +51,13 @@ variable "alert_tags_separator" {
 }
 
 variable "options_list" {
-  type = map(any)
+  type = any
   default = {
     tick_every        = 900
     retry_count       = 2
     retry_interval    = 300
     renotify_interval = 120
+    scheduling        = null
   }
 }
 
@@ -86,8 +87,8 @@ variable "script_relative_path" {
 
 variable "create_local_script" {
   description = "Create local test script"
-  type = bool
-  default = true
+  type        = bool
+  default     = true
 }
 
 variable "config_variables" {
